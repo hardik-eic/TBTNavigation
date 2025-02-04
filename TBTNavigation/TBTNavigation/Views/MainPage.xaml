@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TBTNavigation.MainPage">
+
+       <ScrollView>
+              <VerticalStackLayout
+                     Padding="30,0"
+                     Spacing="32">
+                     <!-- Ticket 1 -->
+                     <Frame BorderColor="Transparent"
+                            CornerRadius="5"
+                            Padding="10"
+                            BackgroundColor="#003366"
+                            Margin="10">
+                            <VerticalStackLayout>
+                                   <Label Text="00425401 / 00004370"
+                                          FontSize="16"
+                                          TextColor="YellowGreen"/>
+                                   <Label Text="BigMac Holdings"
+                                          FontSize="18"
+                                          FontAttributes="Bold"
+                                          TextColor="White"/>
+                                   <Label Text="175 River Lane, Bedford, NS B4A 4A6"
+                                          FontSize="14"
+                                          TextColor="LightGray"/>
+                                   <Label Text="FURNACE OIL REBATE, 0 Litre, Tank"
+                                          FontSize="14"
+                                          TextColor="YellowGreen"/>
+                            </VerticalStackLayout>
+                     </Frame>
+
+                     <!-- Ticket 2 -->
+                     <Frame BorderColor="Transparent"
+                            CornerRadius="5"
+                            Padding="10"
+                            BackgroundColor="#003366"
+                            Margin="10">
+                            <VerticalStackLayout>
+                                   <Label Text="00869001 / 00010988"
+                                          FontSize="16"
+                                          TextColor="YellowGreen"/>
+                                   <Label Text="Sharma, Bolis"
+                                          FontSize="18"
+                                          FontAttributes="Bold"
+                                          TextColor="White"/>
+                                   <Label Text="8 Birch Street, Bedford, NS B4A 2W6"
+                                          FontSize="14"
+                                          TextColor="LightGray"/>
+                                   <Label Text="FURNACE OIL REBATE, 0 Litre, Tank"
+                                          FontSize="14"
+                                          TextColor="YellowGreen"/>
+                            </VerticalStackLayout>
+                     </Frame>
+
+                     <!-- Ticket 3 -->
+                     <Frame BorderColor="Transparent"
+                            CornerRadius="5"
+                            Padding="10"
+                            BackgroundColor="#003366"
+                            Margin="10">
+                            <VerticalStackLayout>
+                                   <Label Text="00975001 / 00013109"
+                                          FontSize="16"
+                                          TextColor="YellowGreen"/>
+                                   <Label Text="Erova, Natalia"
+                                          FontSize="18"
+                                          FontAttributes="Bold"
+                                          TextColor="White"/>
+                                   <Label Text="8 Birch Street, Bedford, NS B4A 2W6"
+                                          FontSize="14"
+                                          TextColor="LightGray"/>
+                                   <Label Text="FURNACE OIL REBATE, 0 Litre, Tank"
+                                          FontSize="14"
+                                          TextColor="YellowGreen"/>
+                            </VerticalStackLayout>
+                     </Frame>
+
+                     <Button
+                            x:Name="CounterBtn"
+                            Text="Navigate"
+                            SemanticProperties.Hint="Redirects you to navigation page"
+                            Clicked="OnCounterClicked"
+                            HorizontalOptions="Fill"/>
+              </VerticalStackLayout>
+       </ScrollView>
+
+</ContentPage>

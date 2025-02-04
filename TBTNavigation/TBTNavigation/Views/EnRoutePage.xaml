@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ctrl="clr-namespace:TBTNavigation.Controls"
+             x:Class="TBTNavigation.EnRoutePage"
+             Title="Navigating">
+    <!-- xmlns:ctrl="clr-namespace:TBTNavigation.Controls" -->
+    <!-- xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps" -->
+
+    <StackLayout
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+        Padding="0"
+        Spacing="0">
+        <Frame
+            Padding="8"
+            Margin="8">
+            <HorizontalStackLayout
+                Spacing="4"
+                Padding="4">
+                <Label
+                    BackgroundColor="Yellow"
+                    Text="{Binding CurrentStepManeuver}"
+                    FontSize="18"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Center"/>
+
+                <Label
+                    BackgroundColor="LightBlue"
+                    Text="{Binding CurrentStepInstruction}"
+                    FontSize="18"
+                    TextType="Html"
+                    HorizontalOptions="StartAndExpand"
+                    LineBreakMode="WordWrap"
+                    MaxLines="4"
+                    VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <StackLayout ZIndex="-1"
+                     VerticalOptions="FillAndExpand">
+            <ctrl:MapEx
+                x:Name="MapView"
+                CustomPins="{Binding Pins}"
+                CompassEnabled="False"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                IsShowingUser="True"
+                MapType="Terrain"/>
+        </StackLayout>
+    </StackLayout>
+    <!-- <StackLayout>
+        <ctrl:MapEx
+            x:Name="MapView"
+            CustomPins="{Binding Pins}"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            IsShowingUser="True"
+            MapType="Street"/>
+
+        <maps:Map x:Name="MapView"
+                  VerticalOptions="FillAndExpand"
+                  HorizontalOptions="FillAndExpand"
+                  MapType="Street"
+                  IsShowingUser="True"/>
+        <ListView x:Name="InstructionsListView"
+                  HeightRequest="200"/>
+    </StackLayout> -->
+
+</ContentPage>
